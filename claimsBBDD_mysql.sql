@@ -1,8 +1,8 @@
-drop database claims_iabd;
+drop database if exists claims_iabd;
 
 create database claims_iabd;
 
-use claims;
+use claims_iabd;
 
 CREATE TABLE claims (
 	`_record_number` int AUTO_INCREMENT NOT NULL,
@@ -19,10 +19,10 @@ CREATE TABLE claims (
 	`InitialIncurredCalimsCost` integer,
 	`MaritalStatus` varchar(1),
 	`PartTimeFullTime` varchar(1),
-	`UltimateIncurredClaimCost` numeric(11,7),
+	`UltimateIncurredClaimCost` numeric(18,10),
 	`WeeklyWages` numeric(7,2),
 	primary key(`_record_number`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 create user 'claims_dba'@'%' identified by 'cloudera';
 grant all on claims_iabd.* to 'claims_dba'@'localhost' identified by 'cloudera';
@@ -7210,7 +7210,7 @@ insert into claims (
 (26, 'TWISTED TO AVOID FALLING LOAD TWISTED LEFT ANKLE', 'WC3096730', '1991-07-19 00:00:00', '1991-07-07 09:00:00', 5, 0, 0, 'M', 38, 3500, 'S', 'F', 3085.927297, 418),
 (26, 'FLASH FROM WELDER WELDING FLASH EYE', 'WC3195731', '1991-12-08 00:00:00', '1991-07-08 00:00:00', 5, 0, 0, 'M', 40, 500, 'U', 'F', 438.0093323, 576.89),
 (39, 'FALL FROM BACK OF TRUCK LOWER BACK', 'WC3478134', '1991-07-31 00:00:00', '1991-07-08 08:00:00', 5, 0, 0, 'F', 38, 3500, 'M', 'F', 8547.252454, 363.8),
-(51, 'CAUGHT �� BAR AND SLIPPED LACERATION LEFT HAND', 'WC3306433', '1991-07-17 00:00:00', '1991-07-08 10:00:00', 5, 0, 0, 'M', 38, 3500, 'U', 'F', 5992.469342, 388.8),
+(51, 'CAUGHT BAR AND SLIPPED LACERATION LEFT HAND', 'WC3306433', '1991-07-17 00:00:00', '1991-07-08 10:00:00', 5, 0, 0, 'M', 38, 3500, 'U', 'F', 5992.469342, 388.8),
 (38, 'LIFTING CARRYING KG BOXES RUPTURED DISC BACK', 'WC3290932', '1991-10-28 00:00:00', '1991-07-08 12:00:00', 5, 0, 0, 'M', 38, 11100, 'S', 'F', 13494.32019, 480.77),
 (48, 'OFFICE WORK WRIST AND ELBOW', 'WC3313833', '1994-04-25 00:00:00', '1991-07-08 12:00:00', 5, 0, 0, 'M', 60, 38000, 'M', 'F', 41910.83844, 669),
 (36, 'FOREIGN BODY IN EYE FOREIGN BODY RIGHT EYE', 'WC3091930', '1991-07-24 00:00:00', '1991-07-08 15:00:00', 5, 0, 0, 'M', 40, 500, 'M', 'F', 340.9757667, 575.24),

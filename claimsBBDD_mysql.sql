@@ -25,6 +25,8 @@ CREATE TABLE claims (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 grant all on claims_iabd.* to 'claims_dba'@'%' identified by 'cloudera';
+grant all on claims_iabd.* to 'claims_dba'@'nodo1' identified by 'cloudera';
+grant all on claims_iabd.* to 'claims_dba'@'localhost' identified by 'cloudera';
 
 flush privileges;
 

@@ -1,4 +1,4 @@
-drop database ventas;
+drop database if exists ventas;
 
 create database ventas;
 
@@ -25,7 +25,7 @@ create table if not exists ventas(
 	rating float(3,2) not null,
 	primary key (id)) engine=innodb;
 
-create user 'ventas'@'%' identified by 'ventasVentas12345';
+create user 'ventas'@'%' identified by '_ventasVentas12345';
 grant all on ventas.* to 'ventas'@'%';
 flush privileges;
 

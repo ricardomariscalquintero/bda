@@ -7,6 +7,10 @@ create table dim_customer as select row_number() over () as id, customer_type, g
 create table dim_product as select row_number() over () as id, product_line, unit_price from ventas group by product_line, unit_price;
 
 
+-- Ponemos a falso la acción del optimizador de Hive.
+SET hive.auto.convert.join=false;
+
+
 -- Creación de hechos.
 
 create table fact_sale as select v.id, v.invoice_id, l.id loc_id, c.id cus_id, p.id pro_id, v.quantity, v.tax, v.total, v.dateVenta, v.timeVenta, v.payment

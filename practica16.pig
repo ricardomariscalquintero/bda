@@ -1,4 +1,4 @@
-ventas = LOAD '/user/hadoop/ventas/ventas/part-m-00000' USING PigStorage(',')
+ventas = LOAD '/user/hadoop/ventas/part-m-00000' USING PigStorage(',')
 AS (id,
 	invoice_id,
 	branch,

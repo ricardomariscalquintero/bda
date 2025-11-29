@@ -1,0 +1,10 @@
+  {"code": 1, "date": "2025-08-01", "item": "Hammer", "price": 15.75, "description": "Claw hammer with fiberglass handle"}
+  {"code": 2, "date": "2025-08-02", "item": "Screwdriver Set", "price": 22.50, "responsible": "John Smith"}
+  {"code": 3, "date": "2025-08-05", "item": "Wrench", "price": 12.00}
+  {"code": 4, "date": "2025-08-07", "item": "Pliers", "price": 9.99, "description": "6-inch needle nose pliers", "responsible": "Jane Doe"}
+  {"code": 5, "date": "2025-08-10", "item": "Tape Measure", "price": 7.25}
+  {"code": 6, "date": "2025-08-12", "item": "Drill Bits", "price": 18.50, "description": "Titanium drill bit set"}
+  {"code": 7, "date": "2025-08-15", "item": "Level", "price": 24.00, "responsible": "Peter Jones"}
+  {"code": 8, "date": "2025-08-18", "item": "Utility Knife", "price": 5.50, "description": "Retractable blade knife"}
+  {"code": 9, "date": "2025-08-22", "item": "Safety Goggles", "price": 8.00, "description": "Anti-fog safety glasses", "responsible": "Mary Williams"}
+  {"code": 10, "date": "2025-08-25", "item": "Gloves", "price": 11.75}
